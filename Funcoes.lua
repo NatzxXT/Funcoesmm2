@@ -2067,6 +2067,5 @@ end
 -- ==========================================
 coroutine.wrap(JWXW_routine)()
 coroutine.wrap(XEEC_routine)()
-coroutine.wrap(UPQDPIR_routine)()
 
 print("✅ [YARHM] Módulos do jogo (MM2, Universal) carregados com sucesso!")
