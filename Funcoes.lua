@@ -17,9 +17,7 @@ local fu = getgenv().YARHM_FUNCTIONS
 -- ==========================================
 
 local function JWXW_routine() -- StarterGui.YARHM.Universal
-    local script = Instance.new("LocalScript")
-    script.Name = "Universal"
-    script.Parent = Converted["_YARHM"]
+local script = { Parent = getgenv().YARHM }
     local req = require
     local require = function(obj)
         local routine = routine_module_scripts[obj]
