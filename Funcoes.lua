@@ -6,7 +6,6 @@
 repeat task.wait() until getgenv().YARHM and getgenv().YARHM_FUNCTIONS
 
 -- 2. O TRUQUE: Criamos um 'script' falso que aponta para o Menu do Repositório A
--- Assim, todas as linhas originais que usam 'script.Parent' vão funcionar de primeira!
 local script = { Parent = getgenv().YARHM }
 
 -- 3. Puxa as funções do menu
@@ -18,9 +17,9 @@ local fu = getgenv().YARHM_FUNCTIONS
 
 local function JWXW_routine() -- StarterGui.YARHM.Universal
     local script = { Parent = getgenv().YARHM }
-    local req = require
+    -- CORREÇÃO PARA EXECUTORES QUE NÃO TÊM 'require'
+    local req = require or function() return nil end
     local require = function(obj)
-        -- CORREÇÃO AQUI: Verifica se a tabela existe antes de usar
         local routine = routine_module_scripts and routine_module_scripts[obj]
         if routine then return routine() end
         return req(obj)
@@ -1011,9 +1010,8 @@ end
 
 local function XEEC_routine() -- StarterGui.YARHM.Murder Mystery 2
     local script = { Parent = getgenv().YARHM }
-    local req = require
+    local req = require or function() return nil end
     local require = function(obj)
-        -- CORREÇÃO AQUI
         local routine = routine_module_scripts and routine_module_scripts[obj]
         if routine then
             return routine()
@@ -1981,9 +1979,8 @@ end
 
 local function UPQDPIR_routine() -- StarterGui.YARHM.AdLoader
     local script = { Parent = getgenv().YARHM }
-    local req = require
+    local req = require or function() return nil end
     local require = function(obj)
-        -- CORREÇÃO AQUI
         local routine = routine_module_scripts and routine_module_scripts[obj]
         if routine then
             return routine()
