@@ -20,7 +20,8 @@ local function JWXW_routine() -- StarterGui.YARHM.Universal
     local script = { Parent = getgenv().YARHM }
     local req = require
     local require = function(obj)
-        local routine = routine_module_scripts[obj]
+        -- CORREÇÃO AQUI: Verifica se a tabela existe antes de usar
+        local routine = routine_module_scripts and routine_module_scripts[obj]
         if routine then return routine() end
         return req(obj)
     end
@@ -1012,7 +1013,8 @@ local function XEEC_routine() -- StarterGui.YARHM.Murder Mystery 2
     local script = { Parent = getgenv().YARHM }
     local req = require
     local require = function(obj)
-        local routine = routine_module_scripts[obj]
+        -- CORREÇÃO AQUI
+        local routine = routine_module_scripts and routine_module_scripts[obj]
         if routine then
             return routine()
         end
@@ -1981,7 +1983,8 @@ local function UPQDPIR_routine() -- StarterGui.YARHM.AdLoader
     local script = { Parent = getgenv().YARHM }
     local req = require
     local require = function(obj)
-        local routine = routine_module_scripts[obj]
+        -- CORREÇÃO AQUI
+        local routine = routine_module_scripts and routine_module_scripts[obj]
         if routine then
             return routine()
         end
