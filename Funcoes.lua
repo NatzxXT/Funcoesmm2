@@ -201,8 +201,6 @@ local function JWXW_routine() -- StarterGui.YARHM.Universal
     table.insert(module, {
         Type = "Toggle",
         Args = {"OP Fly (Básico)", function(Self, state)
-            -- Como o módulo FlyUtility foi removido, esta opção apenas avisa.
-            -- Se você quiser voar, precisaria de um script separado.
             if state then fu.notification("Fly module is not available in this version.") end
         end}
     })
