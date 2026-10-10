@@ -17,7 +17,7 @@ local fu = getgenv().YARHM_FUNCTIONS
 -- ==========================================
 
 local function JWXW_routine() -- StarterGui.YARHM.Universal
-local script = { Parent = getgenv().YARHM }
+    local script = { Parent = getgenv().YARHM }
     local req = require
     local require = function(obj)
         local routine = routine_module_scripts[obj]
@@ -1009,9 +1009,7 @@ local script = { Parent = getgenv().YARHM }
 end
 
 local function XEEC_routine() -- StarterGui.YARHM.Murder Mystery 2
-    local script = Instance.new("LocalScript")
-    script.Name = "Murder Mystery 2"
-    script.Parent = Converted["_YARHM"]
+    local script = { Parent = getgenv().YARHM }
     local req = require
     local require = function(obj)
         local routine = routine_module_scripts[obj]
@@ -1980,9 +1978,7 @@ local function XEEC_routine() -- StarterGui.YARHM.Murder Mystery 2
 end
 
 local function UPQDPIR_routine() -- StarterGui.YARHM.AdLoader
-    local script = Instance.new("LocalScript")
-    script.Name = "AdLoader"
-    script.Parent = Converted["_YARHM"]
+    local script = { Parent = getgenv().YARHM }
     local req = require
     local require = function(obj)
         local routine = routine_module_scripts[obj]
@@ -2065,5 +2061,6 @@ end
 -- ==========================================
 coroutine.wrap(JWXW_routine)()
 coroutine.wrap(XEEC_routine)()
+coroutine.wrap(UPQDPIR_routine)()
 
 print("✅ [YARHM] Módulos do jogo (MM2, Universal) carregados com sucesso!")
